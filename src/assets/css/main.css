@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Caveat Brush';
+  src:
+    url('fonts/caveat-brush-latin-400-normal.woff2') format('woff2'),
+    url('fonts/caveat-brush-latin-400-normal.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caveat Brush';
+  src:
+    url('fonts/caveat-brush-latin-ext-400-normal.woff2') format('woff2'),
+    url('fonts/caveat-brush-latin-ext-400-normal.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Caveat Brush', cursive;
+  background-image: url('../Sprinkle.svg');
+  background-size: cover;
+}
+
+#circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #353d4498;
+  pointer-events: none;
+}

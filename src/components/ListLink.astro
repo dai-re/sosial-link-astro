@@ -1,0 +1,61 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  link?: string;
+  alt?: string;
+  icon?: string;
+}
+const { link = 'https://', alt = 'link', icon = 'facebook' } = Astro.props;
+---
+
+<li class="sosial-link mx-auto flex items-center rounded-md shadow-lg hover:shadow-none">
+  <a
+    href={link}
+    class="flex h-full w-full items-center gap-2 px-2"
+    target="_blank"
+  >
+    <Icon
+      name={`brand-${icon}`}
+      class="text-3xl"
+    />
+    <h3 class="text-2xl">{alt}</h3>
+  </a>
+</li>
+
+<style>
+  li {
+    width: 300px;
+    height: 50px;
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('mousemove', function (event) {
+    const poin = document.getElementById('circle');
+    const circleWidth = circle.offsetWidth;
+    const circleHeight = circle.offsetHeight;
+    poin.style.left = event.clientX - circleWidth / 2 + 'px';
+    poin.style.top = event.clientY - circleHeight / 2 + 'px';
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const randomColor = [
+      '#FFE9D0',
+      '#af9da9',
+      '#BBE9FF',
+      '#B1AFFF',
+      '#F6995C',
+      '#51829B',
+      '#9BB0C1',
+      '#EADFB4',
+      '#A5DD9B',
+      '#804674',
+    ];
+    const list = document.querySelectorAll('.sosial-link');
+    list.forEach((listItem) => {
+      const color = randomColor[Math.floor(Math.random() * randomColor.length)];
+      listItem.style.backgroundColor = color;
+    });
+  });
+</script>
