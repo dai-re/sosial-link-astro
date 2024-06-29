@@ -31,14 +31,6 @@ const { link = 'https://', alt = 'link', icon = 'facebook' } = Astro.props;
 </style>
 
 <script is:inline>
-  document.addEventListener('mousemove', function (event) {
-    const poin = document.getElementById('circle');
-    const circleWidth = circle.offsetWidth;
-    const circleHeight = circle.offsetHeight;
-    poin.style.left = event.clientX - circleWidth / 2 + 'px';
-    poin.style.top = event.clientY - circleHeight / 2 + 'px';
-  });
-
   document.addEventListener('DOMContentLoaded', () => {
     const randomColor = [
       '#FFE9D0',

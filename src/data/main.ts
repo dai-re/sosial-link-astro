@@ -30,6 +30,6 @@ export const sosialLink: { name: string; url: string; icon: string }[] = [
   {
     name: 'Blog dairew',
     icon: 'blog',
-    url: 'https://www.blog.dairew.my.id/',
+    url: 'https://blog.dairew.my.id/',
   },
 ];
